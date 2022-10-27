@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public Transform tile;
 
     [Tooltip("Where the first tile should be placed at")]
-    public Vector3 startPoint = new Vector3(0, 0, -5);
+    public Vector3 startPoint = new Vector3(0, 0, 5);
 
     [Tooltip("How many tiles should we create in advance")]
     [Range(1, 15)]
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         
         if (timePased >= timeToSpaw)
         {
-            Instantiate(obstaculos, new Vector3(0, 1, nextTile.position.z + 8), obstaculos.transform.rotation, nextTile);
+            Instantiate(obstaculos, new Vector3(0, 1, nextTile.position.z + 15), obstaculos.transform.rotation, nextTile);
         }
         
     }
