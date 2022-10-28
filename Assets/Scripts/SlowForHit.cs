@@ -16,9 +16,14 @@ public class SlowForHit : MonoBehaviour
     public Text[] lineName;
     public Image[] lineImage;
 
+    public Text lineNameR;
+    public Image lineImageR;
+
     private int random;
 
     private int[] line;
+
+    private bool correctL;
 
     // Update is called once per frame
     void Update()
@@ -50,21 +55,44 @@ public class SlowForHit : MonoBehaviour
         }
     }
 
-    void LineChek()
-    {
-        for(int i = 0; i < 3; i++)
-        {
-
-        }
-    }
-
     void Rand()
     {
         for(int i = 0; i < 3; i++)
         {
             random = Random.Range(1, 7);
-            line[i] = random;
+
+            lineName[i].text = lineStage1[random].name;
+
+            Debug.Log(lineStage1[random].name);
         }
         
+        random = Random.Range(1,4);
+
+        lineNameR.text = lineName[random].text;
     }
+
+    void Chose1()
+    {
+        if(lineNameR.text == lineName[0].text)
+        {
+            correctL = true;
+        }
+    }
+
+    void Chose2()
+    {
+        if(lineNameR.text == lineName[1].text)
+        {
+            correctL = true;
+        }
+    }
+
+    void Chose3()
+    {
+        if(lineNameR.text == lineName[2].text)
+        {
+            correctL = true;
+        }
+    }
+
 }
