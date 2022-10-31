@@ -11,7 +11,11 @@ public class SlowForHit : MonoBehaviour
 
     public LinesSo[] lineStage1;
 
+    public int[] linepuntos;
+
     public LinesSo[] lineStage2;
+
+    public FloatSo puntos;
 
     public Text[] lineName;
     public Image[] lineImage;
@@ -63,7 +67,8 @@ public class SlowForHit : MonoBehaviour
 
             lineName[i].text = lineStage1[random].name;
 
-            Debug.Log(lineStage1[random].name);
+            linepuntos[i] = lineStage1[random].points;
+
         }
         
         random = Random.Range(1,4);
@@ -71,27 +76,30 @@ public class SlowForHit : MonoBehaviour
         lineNameR.text = lineName[random].text;
     }
 
-    void Chose1()
+    public void Chose1()
     {
         if(lineNameR.text == lineName[0].text)
         {
             correctL = true;
+            puntos.Value += linepuntos[0];
         }
     }
 
-    void Chose2()
+    public void Chose2()
     {
         if(lineNameR.text == lineName[1].text)
         {
             correctL = true;
+            puntos.Value += linepuntos[1];
         }
     }
 
-    void Chose3()
+    public void Chose3()
     {
         if(lineNameR.text == lineName[2].text)
         {
             correctL = true;
+            puntos.Value += linepuntos[2];
         }
     }
 

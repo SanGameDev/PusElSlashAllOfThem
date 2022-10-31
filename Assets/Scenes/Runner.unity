@@ -380,7 +380,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 819504428}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1928587086}
+        m_TargetAssemblyTypeName: SlowForHit, Assembly-CSharp
+        m_MethodName: Chose2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &819504428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +966,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1070248218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1928587086}
+        m_TargetAssemblyTypeName: SlowForHit, Assembly-CSharp
+        m_MethodName: Chose3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1070248218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,7 +1030,7 @@ GameObject:
   - component: {fileID: 1445548340}
   - component: {fileID: 1445548339}
   m_Layer: 5
-  m_Name: utton (1)
+  m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1076,7 +1100,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1445548340}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1928587086}
+        m_TargetAssemblyTypeName: SlowForHit, Assembly-CSharp
+        m_MethodName: Chose1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1445548340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,6 +1393,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66404072d5b65c14eae620529a9eddfb, type: 2}
   - {fileID: 11400000, guid: 85591e81496925a41917e9a44125ee2a, type: 2}
   lineStage2: []
+  puntos: {fileID: 0}
   lineName:
   - {fileID: 1006706097}
   - {fileID: 2103334830}
