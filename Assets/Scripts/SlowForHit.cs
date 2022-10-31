@@ -9,9 +9,9 @@ public class SlowForHit : MonoBehaviour
     public bool paint = false;
     public GameObject screen;
 
-    public LinesSo[] lineStage1;
+    private int[] linepuntos;
 
-    public int[] linepuntos;
+    public LinesSo[] lineStage1;
 
     public LinesSo[] lineStage2;
 
@@ -19,7 +19,7 @@ public class SlowForHit : MonoBehaviour
 
     public Text[] lineName;
     public Image[] lineImage;
-
+    
     public Text lineNameR;
     public Image lineImageR;
 
