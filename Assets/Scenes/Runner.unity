@@ -1393,7 +1393,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66404072d5b65c14eae620529a9eddfb, type: 2}
   - {fileID: 11400000, guid: 85591e81496925a41917e9a44125ee2a, type: 2}
   lineStage2: []
-  puntos: {fileID: 0}
+  puntos: {fileID: 11400000, guid: f7f4ecb557e0dbb42b55229c7807c323, type: 2}
   lineName:
   - {fileID: 1006706097}
   - {fileID: 2103334830}
