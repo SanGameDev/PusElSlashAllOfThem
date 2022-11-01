@@ -63,7 +63,7 @@ public class SlowForHit : MonoBehaviour
     {
         for(int i = 0; i < 3; i++)
         {
-            random = Random.Range(1, 7);
+            random = Random.Range(0, 9);
 
             lineName[i].text = lineStage1[random].name;
 
@@ -71,7 +71,7 @@ public class SlowForHit : MonoBehaviour
 
         }
         
-        random = Random.Range(1,4);
+        random = Random.Range(0,3);
 
         lineNameR.text = lineName[random].text;
     }
