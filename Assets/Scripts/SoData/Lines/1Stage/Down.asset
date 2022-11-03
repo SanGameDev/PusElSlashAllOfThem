@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968ffd0b0284d524f8afe77000720456, type: 3}
-  m_Name: Up
+  m_Name: Down
   m_EditorClassIdentifier: 
   stage: 1
-  name: Up
-  Artwork: {fileID: 0}
+  name: Down
+  Artwork: {fileID: 21300000, guid: c5e797365bccb2340a3af5cffac10c69, type: 3}
   points: 2

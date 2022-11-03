@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968ffd0b0284d524f8afe77000720456, type: 3}
-  m_Name: VerticalDiagonal
+  m_Name: ZigZag
   m_EditorClassIdentifier: 
-  stage: 0
-  name: VerticalDiagonal
-  Artwork: {fileID: 0}
+  stage: 1
+  name: ZigZag
+  Artwork: {fileID: 21300000, guid: 083fd604cdbd8d34d9385f13261d871e, type: 3}
   points: 2

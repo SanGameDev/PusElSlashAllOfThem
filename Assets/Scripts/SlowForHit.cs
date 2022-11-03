@@ -8,14 +8,16 @@ public class SlowForHit : MonoBehaviour
     
     public bool paint = false;
     public GameObject screen;
-
-    private int[] linepuntos;
+    public GameObject loseScreen;
+    private int[] linepuntos = new int[3];
 
     public LinesSo[] lineStage1;
 
     public LinesSo[] lineStage2;
 
     public FloatSo puntos;
+
+    public ShopSo shop;
 
     public Text[] lineName;
     public Image[] lineImage;
@@ -27,14 +29,21 @@ public class SlowForHit : MonoBehaviour
 
     private int[] line;
 
-    private bool correctL;
+    private bool correctL = false;
 
-    // Update is called once per frame
+    private bool chose = false;
+
+    void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     void Update()
     {
         if(paint == true){
             screen.SetActive(true);
-        }else
+        }
+        else
         {
             screen.SetActive(false);
         }
@@ -44,18 +53,39 @@ public class SlowForHit : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            Time.timeScale = .2f;
+            if(shop.buyAvility1 == true)
+            {
+                Time.timeScale = 0.3f;
+            }else
+            {
+                Time.timeScale = 0.4f;
+            }
             paint = true;
             Rand();
         }
+        correctL = false;
     }
 
     void OnTriggerExit(Collider col)
     {
         if (col.gameObject.tag == "Enemy")
         {
-            Time.timeScale = 1f;
             paint = false;
+            if(correctL == false && shop.buyAvility2 != true)
+            {
+                Time.timeScale = 0.0f;
+                loseScreen.SetActive(true);
+            }
+            if(correctL == true || shop.buyAvility2 == true)
+            {
+                Time.timeScale = 1f;
+                Destroy(col.gameObject);
+                chose = false;
+                if(correctL == false)
+                {
+                    shop.buyAvility2 = false;
+                }
+            }
         }
     }
 
@@ -65,7 +95,8 @@ public class SlowForHit : MonoBehaviour
         {
             random = Random.Range(0, 9);
 
-            lineName[i].text = lineStage1[random].name;
+            //lineName[i].text = lineStage1[random].name;
+            lineImage[i].sprite = lineStage1[random].Artwork;
 
             linepuntos[i] = lineStage1[random].points;
 
@@ -73,13 +104,15 @@ public class SlowForHit : MonoBehaviour
         
         random = Random.Range(0,3);
 
-        lineNameR.text = lineName[random].text;
+        //lineNameR.text = lineName[random].text;
+        lineImageR.sprite = lineImage[random].sprite;
     }
 
     public void Chose1()
     {
-        if(lineNameR.text == lineName[0].text)
+        if(lineImageR.sprite == lineImage[0].sprite && chose == false)
         {
+            chose = true;
             correctL = true;
             puntos.Value += linepuntos[0];
         }
@@ -87,8 +120,9 @@ public class SlowForHit : MonoBehaviour
 
     public void Chose2()
     {
-        if(lineNameR.text == lineName[1].text)
+        if(lineImageR.sprite == lineImage[1].sprite && chose == false)
         {
+            chose = true;
             correctL = true;
             puntos.Value += linepuntos[1];
         }
@@ -96,8 +130,9 @@ public class SlowForHit : MonoBehaviour
 
     public void Chose3()
     {
-        if(lineNameR.text == lineName[2].text)
+        if(lineImageR.sprite == lineImage[2].sprite && chose == false)
         {
+            chose = true;
             correctL = true;
             puntos.Value += linepuntos[2];
         }

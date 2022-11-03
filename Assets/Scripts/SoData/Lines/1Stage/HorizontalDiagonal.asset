@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   name: HorizontalDiagonal
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: a9819c0d223a5da44888bd4722f77bee, type: 3}
   points: 2
