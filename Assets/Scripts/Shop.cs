@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
     public FloatSo puntos;
 
     public GameObject buy1;
+    public GameObject buy2;
 
     public Text monedas;
 
@@ -19,6 +20,10 @@ public class Shop : MonoBehaviour
         if(shopSo.buyAvility1 == true)
         {
             buy1.SetActive(false);
+        }
+        if(shopSo.buyAvility2 == true)
+        {
+            buy2.SetActive(false);
         }
     }
 
@@ -41,6 +46,7 @@ public class Shop : MonoBehaviour
             shopSo.buyAvility2 = true;
             puntos.Value -= 30;
             monedas.text = puntos.Value.ToString();
+            buy2.SetActive(false);
         }
         
     }

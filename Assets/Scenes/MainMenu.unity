@@ -4273,6 +4273,7 @@ MonoBehaviour:
   shopSo: {fileID: 11400000, guid: 384463afd37ddfe4b9db17697625e71a, type: 2}
   puntos: {fileID: 11400000, guid: f7f4ecb557e0dbb42b55229c7807c323, type: 2}
   buy1: {fileID: 1618554300}
+  buy2: {fileID: 750681416}
   monedas: {fileID: 782628376}
 --- !u!4 &1833474522
 Transform:

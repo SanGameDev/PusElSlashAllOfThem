@@ -33,6 +33,10 @@ public class SlowForHit : MonoBehaviour
 
     private bool chose = false;
 
+    public Text puntosActualesT;
+
+    private int puntosActuales;
+
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -85,6 +89,7 @@ public class SlowForHit : MonoBehaviour
                 {
                     shop.buyAvility2 = false;
                 }
+                puntosActualesT.text = puntosActuales.ToString();
             }
         }
     }
@@ -115,6 +120,7 @@ public class SlowForHit : MonoBehaviour
             chose = true;
             correctL = true;
             puntos.Value += linepuntos[0];
+            puntosActuales += linepuntos[0];
         }
     }
 
@@ -125,6 +131,7 @@ public class SlowForHit : MonoBehaviour
             chose = true;
             correctL = true;
             puntos.Value += linepuntos[1];
+            puntosActuales += linepuntos[1];
         }
     }
 
@@ -135,6 +142,7 @@ public class SlowForHit : MonoBehaviour
             chose = true;
             correctL = true;
             puntos.Value += linepuntos[2];
+            puntosActuales += linepuntos[2];
         }
     }
 
