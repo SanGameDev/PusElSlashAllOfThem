@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4730bc69b535843b379f5352e76f24, type: 3}
   m_Name: ShopSo
   m_EditorClassIdentifier: 
-  buyAvility1: 0
+  buyAvility1: 1
   buyAvility2: 0
