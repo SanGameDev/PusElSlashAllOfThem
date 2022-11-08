@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 2
   name: TriangleUp
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: e2557869aa77ab048a907389a6da3b57, type: 3}
   points: 5

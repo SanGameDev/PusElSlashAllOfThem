@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 2
   name: Circle
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: 1aab12f93f717714da37d4d9a351eca6, type: 3}
   points: 5

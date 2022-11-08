@@ -2541,7 +2541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1539504756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2885,6 +2885,8 @@ MonoBehaviour:
   paint: 0
   screen: {fileID: 1539504755}
   loseScreen: {fileID: 938600194}
+  stage1: 0
+  stage2: 0
   lineStage1:
   - {fileID: 11400000, guid: 7299c57725ca17b4192c16aded83c34f, type: 2}
   - {fileID: 11400000, guid: 8bef1fc1f3f22e147a598184449834a3, type: 2}
@@ -2895,7 +2897,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5be79e688017eac47a53bd2ea21f8387, type: 2}
   - {fileID: 11400000, guid: 66404072d5b65c14eae620529a9eddfb, type: 2}
   - {fileID: 11400000, guid: 85591e81496925a41917e9a44125ee2a, type: 2}
-  lineStage2: []
+  lineStage2:
+  - {fileID: 11400000, guid: 32870c37cbbe3f945a092e38bf1fa851, type: 2}
+  - {fileID: 11400000, guid: 7d514eb8dd7d865419194c38b3224cab, type: 2}
+  - {fileID: 11400000, guid: 7db900e640e32944b86c7b0602f89fb5, type: 2}
+  - {fileID: 11400000, guid: aa1a0113b4f711943a09355310e09071, type: 2}
+  - {fileID: 11400000, guid: 9c371a671f0523941953f22b54363634, type: 2}
+  - {fileID: 11400000, guid: 3286309025fe4124fa025b7cf54bfe8e, type: 2}
+  - {fileID: 11400000, guid: 7381bf87b517d7d46a8038a803d22d50, type: 2}
+  - {fileID: 11400000, guid: f717e0d64fd22404e966c1c751ec6262, type: 2}
+  - {fileID: 11400000, guid: fbd788577d178a144ae73b25333f8676, type: 2}
   puntos: {fileID: 11400000, guid: f7f4ecb557e0dbb42b55229c7807c323, type: 2}
   shop: {fileID: 11400000, guid: 384463afd37ddfe4b9db17697625e71a, type: 2}
   lineName:
@@ -2909,6 +2920,7 @@ MonoBehaviour:
   lineNameR: {fileID: 310113818}
   lineImageR: {fileID: 1263024481}
   puntosActualesT: {fileID: 764489430}
+  puntosActuales: 0
 --- !u!65 &1928587087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2933,7 +2945,7 @@ GameObject:
   - component: {fileID: 2013158730}
   - component: {fileID: 2013158729}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 2
   name: Left
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: c20b547bcd346234994d0ee529cc1712, type: 3}
   points: 5

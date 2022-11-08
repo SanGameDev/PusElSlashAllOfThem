@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 2
   name: Rigth
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: d641c6373ff29e4469cdfd98e9e14005, type: 3}
   points: 5

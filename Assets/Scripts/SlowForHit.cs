@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Colicion
+
 public class SlowForHit : MonoBehaviour
 {
     
@@ -10,6 +12,9 @@ public class SlowForHit : MonoBehaviour
     public GameObject screen;
     public GameObject loseScreen;
     private int[] linepuntos = new int[3];
+
+    public bool stage1;
+    public bool stage2;
 
     public LinesSo[] lineStage1;
 
@@ -35,7 +40,7 @@ public class SlowForHit : MonoBehaviour
 
     public Text puntosActualesT;
 
-    private int puntosActuales;
+    public int puntosActuales;
 
     void Start()
     {
@@ -64,6 +69,20 @@ public class SlowForHit : MonoBehaviour
             {
                 Time.timeScale = 0.4f;
             }
+
+
+            if(puntosActuales <= 25)
+            {
+                stage1 = true;
+                stage2 = false;
+            }
+            else if(puntosActuales >= 26)
+            {
+                stage1 = false;
+                stage2 = true;
+            }
+
+
             paint = true;
             Rand();
         }
@@ -87,7 +106,7 @@ public class SlowForHit : MonoBehaviour
                 chose = false;
                 if(correctL == false)
                 {
-                    shop.buyAvility2 = false;
+                    //shop.buyAvility2 = false;
                 }
                 puntosActualesT.text = puntosActuales.ToString();
             }
@@ -100,10 +119,21 @@ public class SlowForHit : MonoBehaviour
         {
             random = Random.Range(0, 9);
 
-            //lineName[i].text = lineStage1[random].name;
-            lineImage[i].sprite = lineStage1[random].Artwork;
+            if(stage1 == true)
+            {
+                lineImage[i].sprite = lineStage1[random].Artwork;
 
-            linepuntos[i] = lineStage1[random].points;
+                linepuntos[i] = lineStage1[random].points;
+            }
+
+            //lineName[i].text = lineStage1[random].name;
+            
+            if(stage2 == true)
+            {
+                lineImage[i].sprite = lineStage2[random].Artwork;
+
+                linepuntos[i] = lineStage2[random].points;
+            }
 
         }
         
