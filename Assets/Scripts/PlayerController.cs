@@ -12,14 +12,24 @@ public class PlayerController : MonoBehaviour
     //Variables publicas
     public float forwardSpeed = 5;
 
+    public GameObject playcol;
+    public float playvel;
+
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
+
+        playcol = GameObject.Find("Colicion");
+
     }
 
     private void Update()
     {
-        direction.z = forwardSpeed;
+        playvel = playcol.gameObject.GetComponent<SlowForHit>().playerVel;
+
+        // direction.z = forwardSpeed;
+
+        direction.z = playvel;
 
         Vector3 pos = gameObject.transform.position;
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 //Colicion
 
@@ -24,10 +25,10 @@ public class SlowForHit : MonoBehaviour
 
     public ShopSo shop;
 
-    public Text[] lineName;
+    //public Text[] lineName;
     public Image[] lineImage;
     
-    public Text lineNameR;
+    //public Text lineNameR;
     public Image lineImageR;
 
     private int random;
@@ -38,13 +39,17 @@ public class SlowForHit : MonoBehaviour
 
     private bool chose = false;
 
-    public Text puntosActualesT;
+    public TMP_Text puntosActualesT;
 
     public int puntosActuales;
+
+    public int playerVel;
 
     void Start()
     {
         Time.timeScale = 1.0f;
+
+        playerVel = 10;
     }
 
     void Update()
@@ -64,10 +69,12 @@ public class SlowForHit : MonoBehaviour
         {
             if(shop.buyAvility1 == true)
             {
-                Time.timeScale = 0.3f;
+                //Time.timeScale = 0.3f;
+                playerVel = 4;
             }else
             {
-                Time.timeScale = 0.4f;
+                //Time.timeScale = 0.4f;
+                playerVel = 5;
             }
 
 
@@ -96,19 +103,21 @@ public class SlowForHit : MonoBehaviour
             paint = false;
             if(correctL == false && shop.buyAvility2 != true)
             {
-                Time.timeScale = 0.0f;
+                //Time.timeScale = 0.0f;
+                playerVel = 0;
                 loseScreen.SetActive(true);
             }
             if(correctL == true || shop.buyAvility2 == true)
             {
-                Time.timeScale = 1f;
+                //Time.timeScale = 1f;
+                playerVel = 10;
                 Destroy(col.gameObject);
                 chose = false;
                 if(correctL == false)
                 {
-                    //shop.buyAvility2 = false;
+                    shop.buyAvility2 = false;
                 }
-                puntosActualesT.text = puntosActuales.ToString();
+                puntosActualesT.text = "Puntos: " + puntosActuales.ToString();
             }
         }
     }
