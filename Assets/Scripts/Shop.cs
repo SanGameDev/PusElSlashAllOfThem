@@ -18,6 +18,7 @@ public class Shop : MonoBehaviour
 
     void Start()
     {
+        puntos.Load();
         monedas_ = puntos.Value;
         if(shopSo.buyAvility1 == true)
         {
@@ -36,6 +37,7 @@ public class Shop : MonoBehaviour
         {
             shopSo.buyAvility1 = true;
             puntos.Value -= 25;
+            puntos.Save();
             monedas_ = puntos.Value;
             buy1.SetActive(false);
         }
@@ -48,6 +50,7 @@ public class Shop : MonoBehaviour
         {
             shopSo.buyAvility2 = true;
             puntos.Value -= 30;
+            puntos.Save();
             monedas_ = puntos.Value;
             buy2.SetActive(false);
         }

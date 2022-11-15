@@ -4,14 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu]
 
-public class FloatSo : ScriptableObject
+public class FloatSo : PersistentScriptableObject
 {
-    [SerializeField]
-    private float _value;
-
-    public float Value
-    {
-        get { return _value; }
-        set { _value = value; }
-    }
+    public float Value = 0;
 }

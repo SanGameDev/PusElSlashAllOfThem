@@ -160,6 +160,7 @@ public class SlowForHit : MonoBehaviour
             correctL = true;
             puntos.Value += linepuntos[0];
             puntosActuales += linepuntos[0];
+            puntos.Save();
         }
     }
 
@@ -171,6 +172,7 @@ public class SlowForHit : MonoBehaviour
             correctL = true;
             puntos.Value += linepuntos[1];
             puntosActuales += linepuntos[1];
+            puntos.Save();
         }
     }
 
@@ -182,6 +184,7 @@ public class SlowForHit : MonoBehaviour
             correctL = true;
             puntos.Value += linepuntos[2];
             puntosActuales += linepuntos[2];
+            puntos.Save();
         }
     }
 
