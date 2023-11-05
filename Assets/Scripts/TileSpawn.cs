@@ -14,8 +14,7 @@ public class TileSpawn : MonoBehaviour
         if (col.gameObject.GetComponent<PlayerController>())
         {
             // If we did, spawn a new tile
-            GameObject.FindObjectOfType<GameManager>
-            ().SpawnNextTile();
+            GameObject.FindObjectOfType<GameManager>().SpawnNextTile();
             // And destroy this entire tile after a short delay
             Destroy(transform.parent.gameObject, destroyTime);
         }

@@ -16,16 +16,6 @@ public class Obstacle : MonoBehaviour
             Destroy(collision.gameObject); 
             // Call the function ResetGame after waitTime 
             // has passed 
-            Invoke("ResetGame", waitTime); 
         } 
-    } 
-
-    /// <summary> 
-    /// Will restart the currently loaded level 
-    /// </summary> 
-    private void ResetGame() 
-    { 
-        // Restarts the current level 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     } 
 }
